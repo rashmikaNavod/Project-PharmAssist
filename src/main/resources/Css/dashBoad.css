@@ -1,0 +1,26 @@
+.newBillBtn{
+    -fx-background-color: #28a745;
+    -fx-background-radius: 20px;
+}
+.newBillBtn:hover{
+    -fx-cursor: hand;
+}
+
+.exitBtn{
+    -fx-background-color: #dc3545;
+    -fx-background-radius: 20px;
+}
+.exitBtn:hover{
+    -fx-cursor: hand;
+}
+
+.normalBtn{
+    -fx-text-fill: white;
+    -fx-background-color:  #1E1E1E;
+    -fx-background-radius: 5px;
+    -fx-text-alignment: left;
+}
+.normalBtn:hover{
+    -fx-cursor: hand;
+    -fx-background-color: rgba(255,255,255,0.1);
+}

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="placeOrderPane" prefHeight="670.0" prefWidth="1003.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.Ijse.pharmAssist.controller.billFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="70.0" layoutX="24.0" layoutY="54.0" opacity="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="957.0" />
+      <Line endX="714.0" layoutX="278.0" layoutY="47.0" startX="-267.0" stroke="#c7c7cc" strokeWidth="2.0" />
+      <TextField fx:id="txtEmployeeNumber" layoutX="168.0" layoutY="73.0" onAction="#employeeNumberSearchOnAction" onKeyReleased="#txtEmployeeNumberOnKeyReleased" prefHeight="29.0" prefWidth="140.0">
+         <font>
+            <Font name="Roboto" size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtCustomerNumber" layoutX="774.0" layoutY="73.0" onKeyReleased="#txtCustomerNumberOnKeyReleased" prefHeight="29.0" prefWidth="140.0">
+         <font>
+            <Font name="Roboto" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtMedicineName" layoutX="144.0" layoutY="130.0" onAction="#medicineNameSearchOnAction" prefHeight="29.0" prefWidth="140.0">
+         <font>
+            <Font name="Roboto" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtMedicineBrand" layoutX="422.0" layoutY="130.0" onAction="#medicineBrandSearchOnAction" onKeyReleased="#txtMedicineBrandOnKeyReleased" prefHeight="29.0" prefWidth="140.0">
+         <font>
+            <Font name="Roboto" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtMedicineQty" layoutX="921.0" layoutY="130.0" onAction="#medicineQtySearchOnAction" onKeyReleased="#txtMedicineQtyOnKeyReleased" prefHeight="29.0" prefWidth="60.0">
+         <font>
+            <Font name="Roboto" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtItemCode" layoutX="144.0" layoutY="179.0" onAction="#ItemCodeSearchOnAction" onKeyPressed="#txtItemCodeOnKeyPressed" prefHeight="29.0" prefWidth="140.0">
+         <font>
+            <Font name="Roboto" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtItemDescription" layoutX="422.0" layoutY="179.0" prefHeight="29.0" prefWidth="140.0">
+         <font>
+            <Font name="Roboto" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtItemQty" layoutX="922.0" layoutY="179.0" onAction="#itemQtySearchOnAction" onKeyReleased="#txtItemQtyOnKeyReleased" prefHeight="29.0" prefWidth="60.0">
+         <font>
+            <Font name="Roboto" size="15.0" />
+         </font>
+      </TextField>
+      <JFXButton layoutX="827.0" layoutY="225.0" onAction="#addToCartOnAction" prefHeight="36.0" prefWidth="155.0" stylesheets="@../Css/btn.css" text="Add to cart" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Img/cart(2).png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="Btn1" />
+            <String fx:value="Btn3" />
+         </styleClass></JFXButton>
+      <Label fx:id="lblDate" layoutX="890.0" layoutY="12.0" prefHeight="24.0" prefWidth="112.0" textFill="#007bff">
+         <font>
+            <Font name="Roboto Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="838.0" layoutY="14.0" text="Date" textFill="#007bff">
+         <font>
+            <Font name="Roboto Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="8.0" prefHeight="30.0" prefWidth="140.0" text="Place Order">
+         <font>
+            <Font name="Roboto Black" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderId" layoutX="698.0" layoutY="12.0" prefHeight="24.0" prefWidth="140.0" textFill="#007bff">
+         <font>
+            <Font name="Roboto Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="619.0" layoutY="14.0" text="Order ID" textFill="#007bff">
+         <font>
+            <Font name="Roboto Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="78.0" text="Employee Number">
+         <font>
+            <Font name="Roboto Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="640.0" layoutY="78.0" text="Customer Number">
+         <font>
+            <Font name="Roboto Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="328.0" layoutY="78.0" text="Employee Name">
+         <font>
+            <Font name="Roboto Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblEmployeeName" layoutX="459.0" layoutY="73.0" prefHeight="29.0" prefWidth="178.0" textFill="#007bff">
+         <font>
+            <Font name="Roboto Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="135.0" text="Medicine Name">
+         <font>
+            <Font name="Roboto Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="306.0" layoutY="135.0" text="Medicine Brand">
+         <font>
+            <Font name="Roboto Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="586.0" layoutY="135.0" text="Unit price">
+         <font>
+            <Font name="Roboto Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMedicineUnitPrice" layoutX="663.0" layoutY="130.0" prefHeight="29.0" prefWidth="60.0" textFill="#007bff">
+         <font>
+            <Font name="Roboto Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="887.0" layoutY="135.0" text="Qty">
+         <font>
+            <Font name="Roboto Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="184.0" text="Item code">
+         <font>
+            <Font name="Roboto Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="184.0" text="Item Description">
+         <font>
+            <Font name="Roboto Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="586.0" layoutY="184.0" text="Unit price">
+         <font>
+            <Font name="Roboto Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblItemUnitPrice" layoutX="663.0" layoutY="179.0" prefHeight="29.0" prefWidth="60.0" textFill="#007bff">
+         <font>
+            <Font name="Roboto Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="888.0" layoutY="184.0" text="Qty">
+         <font>
+            <Font name="Roboto Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="631.0" text="Net Total" textFill="#007bff">
+         <font>
+            <Font name="Roboto Black" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNetTotal" layoutX="112.0" layoutY="629.0" prefHeight="24.0" prefWidth="123.0" textFill="#007bff">
+         <font>
+            <Font name="Roboto Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblOrderCart" layoutX="23.0" layoutY="271.0" prefHeight="343.0" prefWidth="957.0" stylesheets="@../Css/tableAllingment.css">
+         <columns>
+            <TableColumn fx:id="colItem" prefWidth="190.0" styleClass="align" text="ITEM" />
+            <TableColumn fx:id="colDescription" prefWidth="219.0" styleClass="align" text="DESCRIPTION" />
+            <TableColumn fx:id="colQty" prefWidth="143.0" styleClass="align" text="QTY" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="145.0" styleClass="align" text="UNIT PRICE" />
+            <TableColumn fx:id="colTotal" prefWidth="137.0" styleClass="align" text="TOTAL" />
+            <TableColumn fx:id="colAction" prefWidth="124.0" styleClass="align" text="ACTION" />
+         </columns>
+      </TableView>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="942.0" layoutY="76.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#loadCustomerFormOnAction" prefHeight="22.0" prefWidth="22.0" styleClass="Btn1" stylesheets="@../Css/btn.css">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Img/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="RIGHT" graphicTextGap="10.0" layoutX="751.0" layoutY="623.0" onAction="#placeOrderOnAction" prefHeight="36.0" prefWidth="228.0" style="-fx-background-color: #ff9500;" stylesheets="@../Css/btn.css" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Img/place.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="Btn3" />
+            <String fx:value="Btn1" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton alignment="CENTER" graphicTextGap="8.0" layoutX="512.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#clearFieldOnAction" prefHeight="30.0" prefWidth="97.0" styleClass="Btn1" stylesheets="@../Css/btn.css" text="Clear" textFill="#007bff">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Img/clear.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Roboto Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton contentDisplay="RIGHT" graphicTextGap="10.0" layoutX="554.0" layoutY="623.0" onAction="#createBillOnAction" prefHeight="36.0" prefWidth="178.0" stylesheets="@../Css/btn.css" text="Create Bill" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Img/download.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="Btn3" />
+            <String fx:value="Btn1" />
+         </styleClass>
+      </JFXButton>
+      <Label layoutX="725.0" layoutY="135.0" text="Qty On Hand">
+         <font>
+            <Font name="Roboto Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMedicineQtyOnHand" layoutX="820.0" layoutY="130.0" prefHeight="29.0" prefWidth="68.0" textFill="#007bff">
+         <font>
+            <Font name="Roboto Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="726.0" layoutY="184.0" text="Qty On Hand">
+         <font>
+            <Font name="Roboto Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblItemQtyOnHand" layoutX="821.0" layoutY="179.0" prefHeight="29.0" prefWidth="68.0" textFill="#007bff">
+         <font>
+            <Font name="Roboto Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblEmployeeNumberValidate" layoutX="169.0" layoutY="102.0" prefHeight="19.0" prefWidth="178.0" textFill="RED">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCustomerNumberValidate" layoutX="774.0" layoutY="102.0" prefHeight="19.0" prefWidth="178.0" textFill="RED">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMedicineBrandValidate" layoutX="422.0" layoutY="159.0" prefHeight="19.0" prefWidth="178.0" textFill="RED">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMedicineQtyValidate" alignment="TOP_RIGHT" layoutX="875.0" layoutY="159.0" prefHeight="19.0" prefWidth="106.0" textFill="RED">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblItemQtyValidate" alignment="TOP_RIGHT" layoutX="875.0" layoutY="208.0" prefHeight="19.0" prefWidth="106.0" textFill="RED">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </Label>
+      <JFXButton alignment="CENTER" graphicTextGap="8.0" layoutX="399.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnRefreshOnAction" prefHeight="30.0" prefWidth="112.0" styleClass="Btn1" stylesheets="@../Css/btn.css" text="Refresh" textFill="#007bff">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Img/refesh.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Roboto Bold" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

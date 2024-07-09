@@ -1,0 +1,12 @@
+.Btn{
+    -fx-background-radius: 20px;
+}
+.Btn1:hover{
+    -fx-cursor: hand;
+}
+.Btn3{
+    -fx-background-radius: 7px;
+    -fx-border-radius: 7px;
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+}
